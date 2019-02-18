@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/header/header.component';
-import MenusView from './modules/menus/menus.view';
 import './app.css';
+import MenuDetailPage from './modules/menus/details/menu-detail.page';
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
       <div className="App">
         <Header/>
         <div className='page-container'>
-          <MenusView/>
+          <MenuDetailPage/>
         </div>
       </div>
     );
