@@ -5,14 +5,14 @@ import { timingSafeEqual } from 'crypto';
 export interface MenuCellProps {
   title: string;
   description: string;
-  image: any;
+  img: any;
 }
 
 export default class MenuCell extends React.Component<MenuCellProps, any> {
   render() {
     return (
       <div className='container'>
-        <img src={this.props.image}></img>        
+        <img src={this.props.img}></img>        
         <div className='info-container'>
           <div className='info-column'>
             <p className='info-title'>{this.props.title}</p>
