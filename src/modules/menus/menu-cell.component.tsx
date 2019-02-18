@@ -1,16 +1,22 @@
 import * as React from 'react';
-import './menu-cell.css';
-import prato1 from '../../images/mock/prato1.png'
+import './menu-cell.css'
+import { timingSafeEqual } from 'crypto';
 
-export default class MenuCell extends React.Component<any, any> {
+export interface MenuCellProps {
+  title: string;
+  description: string;
+  image: any;
+}
+
+export default class MenuCell extends React.Component<MenuCellProps, any> {
   render() {
     return (
       <div className='container'>
-        <img src={prato1}></img>        
+        <img src={this.props.image}></img>        
         <div className='info-container'>
           <div className='info-column'>
-            <p className='info-title'>Galinha Assada</p>
-            <p className='info-description'>Delicioso prato preparado com frango, batatas e repolho</p>
+            <p className='info-title'>{this.props.title}</p>
+            <p className='info-description'>{this.props.description}</p>
           </div>
           <div className='info-column'>
             <p className='info-details'>Ver detalhes</p>
