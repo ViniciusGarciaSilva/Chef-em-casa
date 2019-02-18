@@ -10,7 +10,7 @@ class App extends Component {
         <Header/>
         <div className='page-container'>
           <MenuDetailPage/>
-        </div>
+        </div>    
       </div>
     );
   }

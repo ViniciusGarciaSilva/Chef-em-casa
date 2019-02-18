@@ -7,7 +7,7 @@ interface MenusViewProps {
   menus: Menu[];
 }
 
-export default class MenusView extends React.Component<any, any> {
+export default class MenusView extends React.Component<MenusViewProps, any> {
   render() {
     return (
       <div className='menus-container'>

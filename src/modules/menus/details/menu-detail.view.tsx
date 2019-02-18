@@ -1,9 +1,13 @@
 import * as React from 'react';
-import prato3 from '../../../images/mock/prato3.png';
 import './menu-detail.css';
+import { Menu } from '../../../model/menu.model';
 import ic_prato from '../../../images/ic_prato.png';
 
-export default class MenuDetailView extends React.Component<any, any> {
+interface MenuDetailViewProps {
+  menu: Menu;
+}
+
+export default class MenuDetailView extends React.Component<MenuDetailViewProps, any> {
   private renderDetails(title: string, description: string, icon: any): any {
     return (
       <div>
@@ -20,8 +24,8 @@ export default class MenuDetailView extends React.Component<any, any> {
     return (
       <div className='container'>
         <div className='header'>
-          <img src={prato3}></img>
-          <p className='title'>Nhoque</p>
+          <img src={this.props.menu.img}></img>
+          <p className='title'>{this.props.menu.title}</p>
         </div>
         <div className='section'>
           <p className='section-title'>Descrição</p>
@@ -29,9 +33,9 @@ export default class MenuDetailView extends React.Component<any, any> {
         </div>
         <div className='section'>
           <p className='section-title'>Detalhes</p>
-          {this.renderDetails('Entrada', 'Prato de entrada e seus ingredientes', ic_prato)}
-          {this.renderDetails('Principal', 'Prato principal e seus ingredientes', ic_prato)}
-          {this.renderDetails('Sobremesa', 'Sobremesa e seus ingredientes', ic_prato)}
+            {this.renderDetails('Entrada', this.props.menu.details.appetizer, ic_prato)}
+            {this.renderDetails('Principal', this.props.menu.details.main, ic_prato)}
+            {this.renderDetails('Sobremesa', this.props.menu.details.dessert, ic_prato)}      
         </div>
         <div className='section'>
           <p className='section-title'>Preço</p>

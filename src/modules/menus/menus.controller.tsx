@@ -7,18 +7,18 @@ export default class MenusController extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = { 
-      menus: [],       
+      menus: []     
     };
   }
   
   componentDidMount() {
-    const menus = getMenus("");
+    const menus: Menu[] = getMenus("");
     this.setState({menus: menus});
   }
   
   render() {
     return (
-      <MenusView />
+      <MenusView menus={this.state.menus}/>
     );
   }
 }
