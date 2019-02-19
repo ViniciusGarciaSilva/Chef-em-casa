@@ -1,7 +1,7 @@
 import * as React from 'react';
 import MenusView from './menus.view';
-import { getMenus } from '../../data/menus.data';
-import { Menu } from './../../model/menu.model';
+import { getMenus } from '../../../data/menus.data';
+import { Menu } from '../../../model/menu.model';
 
 export default class MenusController extends React.Component<any, any> {
   constructor(props: any) {
