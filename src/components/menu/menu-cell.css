@@ -1,4 +1,4 @@
-.container {
+.menu-cell {
   border-color: grey;
   border-style: solid;
   border-width: 2px;
@@ -8,30 +8,30 @@
   margin-top: 50px;
 }
 
-img {
+.menu-cell__img {
   width: 252px;
   height: 252px;
 }
 
-.info-container {
+.menu-cell__info {
   display: flex;
   justify-content: space-between;
   width: 910px;
 }
 
-.info-column {
+.menu-cell__info__column {
   flex-direction: column;
   margin: 20px;
 }
 
-.info-title {
+.menu-cell__info__title {
   font-size: 64px; 
   font-family: "Just Another Hand";
   color: grey;
   margin: 0px;
 }
 
-.info-description {
+.menu-cell__info__description {
   font-size: 48px;
   font-family: "Just Another Hand";
   color: grey;
@@ -39,7 +39,7 @@ img {
   margin: 0px;
 }
 
-.info-details {
+.menu-cell__info__details {
   font-size: 48px;
   font-family: "Just Another Hand";
   color: red;
