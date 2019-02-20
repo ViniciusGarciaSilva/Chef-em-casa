@@ -1,0 +1,54 @@
+.footer {
+  width: 100vw;
+  height: 500px;
+  background-color: red;
+}
+
+.footer__description {
+  padding-top: 85px;
+  text-align: center;
+}
+
+.footer__description__text {
+  float: center;
+  color: white;
+  font-size: 30px;
+  font-family: "Open Sans";
+  margin: 0px;
+}
+
+.footer__talk {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer__talk__text {
+  font-family: 'Open Sans';
+  font-size: 36px;
+  color: white;
+}
+
+.footer__social-medias {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.footer__social-medias__icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.footer__copyrights {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer__copyrights__text {
+  font-family: 'Open Sans';
+  font-size: 24px;
+  color: white;
+}
+

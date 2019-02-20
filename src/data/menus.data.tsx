@@ -7,8 +7,9 @@ export function getMenus(id: string): Menu[] {
   return MenuMock;
 }
 
-export function getMenuDetail(id: string): Menu {
-  return MenuMock[2];
+export function getMenuDetail(id: string): Menu {  
+  const menu = MenuMock.find(menu => menu.id === id);
+  return menu ? menu : MenuMock[0];
 }
 
 const MenuMock: Menu[] = [

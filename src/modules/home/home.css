@@ -1,0 +1,55 @@
+.home {
+
+}
+
+.home__header {
+  width: 100vw;
+  height: 400px;
+  background-color: #FFBDBD;
+  justify-content: center;
+  display: flex;
+}
+
+.home__header__title {
+  font-size: 144px; 
+  text-align: flex-start;
+  font-family: "Just Another Hand";
+  margin: 0px;
+  color: red;
+}
+
+.home__header__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home__header__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.home__header__search-bar__icon {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.home__header__search-bar {
+  background: white;
+  width: 700px;
+  height: 70px;
+  display: flex;
+  vertical-align: middle;
+
+}
+
+.home__header__search-bar__input {
+  border-color: transparent;
+  color: gray;
+  padding-left: 10px;
+  width: 630px;
+  font-size: 48px;
+  font-family: 'Just Another Hand';
+}

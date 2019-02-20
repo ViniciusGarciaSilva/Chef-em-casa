@@ -3,7 +3,11 @@ import MenuDetailView from './menu-detail.view';
 import { getMenuDetail } from '../../../data/menus.data';
 import { Menu } from '../../../model/menu.model';
 
-export default class MenuDetailContainer extends React.Component<any, any> {
+export interface MenuDetailContainerProps{
+  id: string;
+}
+
+export default class MenuDetailContainer extends React.Component<MenuDetailContainerProps, any> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -23,7 +27,7 @@ export default class MenuDetailContainer extends React.Component<any, any> {
   }
 
   componentDidMount() {
-    const menu: Menu = getMenuDetail('2');
+    const menu: Menu = getMenuDetail(this.props.id);
     this.setState({menu: menu});
   }
   
