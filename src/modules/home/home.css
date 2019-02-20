@@ -4,10 +4,13 @@
 
 .home__header {
   width: 100vw;
-  height: 400px;
-  background-color: #FFBDBD;
+  height: 500px;
+  background-color: black;
+  background-image:url('../../images/dinner2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   justify-content: center;
-  display: flex;
+  display: flex; 
 }
 
 .home__header__title {
@@ -15,7 +18,7 @@
   text-align: flex-start;
   font-family: "Just Another Hand";
   margin: 0px;
-  color: red;
+  color: #D60000;
 }
 
 .home__header__column {
