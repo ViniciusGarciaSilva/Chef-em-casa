@@ -23,7 +23,7 @@ class MenuDetailView extends React.Component<MenuDetailViewProps, any> {
   
   render() {
     return (
-      <div className='menu-detail__container'>
+      <div className='menu-detail'>
         <div className='menu-detail__header'>
           <img className='menu-detail__header__img' src={this.props.menu.img}></img>
           <p className='menu-detail__header__title'>{this.props.menu.title}</p>

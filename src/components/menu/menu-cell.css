@@ -9,8 +9,8 @@
 }
 
 .menu-cell__img {
-  width: 252px;
-  height: 252px;
+  width: 250px;
+  height: 250px;
 }
 
 .menu-cell__info {
@@ -32,16 +32,16 @@
 }
 
 .menu-cell__info__description {
-  font-size: 48px;
-  font-family: "Just Another Hand";
+  font-size: 24px;
+  font-family: "Open Sans";
   color: grey;
-  width: 700px;
+  width: 680px;
   margin: 0px;
 }
 
 .menu-cell__info__details {
-  font-size: 48px;
-  font-family: "Just Another Hand";
-  color: red;
+  font-size: 24px;
+  font-family: "Open Sans";
+  color: #D60000;
   margin: 0px;
 }

@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 WebFont.load({
   google: {
-    families: ['Just Another Hand', 'Montserrat']
+    families: ['Just Another Hand', 'Montserrat','Open Sans']
   }
 });
 

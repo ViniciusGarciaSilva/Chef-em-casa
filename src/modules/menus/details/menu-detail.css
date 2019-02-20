@@ -1,8 +1,9 @@
-.menu-detail__container {
+.menu-detail {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
+  padding-left: 0px;
 }
 
 .menu-detail__header {
@@ -40,9 +41,9 @@
 }
 
 .menu-detail__section__text {
-  font-size: 36px; 
-  text-align: flex-start;
-  font-family: "Just Another Hand";
+  font-size: 18px; 
+  text-align: justify;
+  font-family: "Open Sans";
   margin: 0px;
   color: gray;
 }

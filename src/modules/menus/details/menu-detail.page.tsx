@@ -3,7 +3,7 @@ import MenuDetailContainer from './menu-detail.controller';
 
 class MenuDetailPage extends React.Component<any, any> {
   render() {
-    return <MenuDetailContainer/>;
+    return <MenuDetailContainer id={this.props.match.params.id}/>;
   }
 }
 
