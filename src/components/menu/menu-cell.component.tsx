@@ -20,7 +20,7 @@ export default class MenuCell extends React.Component<MenuCellProps, any> {
             <p className='menu-cell__info__description'>{this.props.description}</p>
           </div>
           <div className='menu-cell__info__column'>
-            <NavLink to={`/menu-detail/${this.props.id}`}><p className='menu-cell__info__details'>Ver detalhes</p></NavLink>
+            <NavLink style={{textDecoration: 'none'}} to={`/menu-detail/${this.props.id}`}><p className='menu-cell__info__details'>Ver detalhes</p></NavLink>
           </div>
         </div>
       </div>

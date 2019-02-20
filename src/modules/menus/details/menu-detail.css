@@ -41,9 +41,9 @@
 }
 
 .menu-detail__section__text {
-  font-size: 36px; 
-  text-align: flex-start;
-  font-family: "Just Another Hand";
+  font-size: 18px; 
+  text-align: justify;
+  font-family: "Open Sans";
   margin: 0px;
   color: gray;
 }

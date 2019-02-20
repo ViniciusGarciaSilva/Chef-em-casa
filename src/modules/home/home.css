@@ -53,6 +53,31 @@
   color: gray;
   padding-left: 10px;
   width: 630px;
-  font-size: 48px;
-  font-family: 'Just Another Hand';
+  font-size: 24px;
+  font-family: 'Open Sans';
+}
+
+.home__main {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.home__main__slogan {
+  font-size: 72px; 
+  text-align: center;
+  font-family: "Just Another Hand";
+  margin-top: 80px;
+  margin-bottom: 45px;
+  color: grey;
+}
+
+.home__main__menus {
+  display: flex;
+  justify-content: center;
+}
+
+.home__main__menus__card {
+  margin-left: 10px;
+  margin-right: 10px;
 }
