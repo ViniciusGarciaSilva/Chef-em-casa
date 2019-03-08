@@ -16,6 +16,7 @@ export default class Header extends React.Component<any, any> {
             <input className='search-bar' placeholder='Pesquise um cardápio' />
           </div>
           <NavLink to='/menus'><a>Meu Menu</a></NavLink>
+          <NavLink to='/orders'><a>Meus Pedidos</a></NavLink>
         </div>
       </header>
     );
