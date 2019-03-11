@@ -27,6 +27,7 @@ const OrderMock: Order[] = [
       dessert: 'Sobremesa e seus ingredientes',
     },
     price: '00,00',
+    status: false,
   },
   {
     id: '1',
@@ -42,6 +43,7 @@ const OrderMock: Order[] = [
       dessert: 'Sobremesa e seus ingredientes',
     },
     price: '00,00',
+    status: true,
   },
   {
     id: '2',
@@ -57,5 +59,6 @@ const OrderMock: Order[] = [
       dessert: 'Sobremesa e seus ingredientes',
     },
     price: '00,00',
+    status: true,
   },
 ]

@@ -21,6 +21,7 @@ class App extends React.Component {
               <Route path="/menu-detail/:id" component={MenuDetailPage} />
               <Route path="/menus" component={MenusPage} />
               <Route path="/orders" component={OrdersPage} />
+              <Route path="/order-detail/:id" component={OrderDetailPage} />
             </Switch>
           </div>
           <Footer/>

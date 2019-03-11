@@ -1,4 +1,4 @@
-.menu-cell {
+.order-cell {
   border-color: grey;
   border-style: solid;
   border-width: 2px;
@@ -8,30 +8,30 @@
   margin-top: 50px;
 }
 
-.menu-cell__img {
+.order-cell__img {
   width: 250px;
   height: 250px;
 }
 
-.menu-cell__info {
+.order-cell__info {
   display: flex;
   justify-content: space-between;
   width: 910px;
 }
 
-.menu-cell__info__column {
+.order-cell__info__column {
   flex-direction: column;
   margin: 20px;
 }
 
-.menu-cell__info__title {
+.order-cell__info__title {
   font-size: 64px; 
   font-family: "Just Another Hand";
   color: grey;
   margin: 0px;
 }
 
-.menu-cell__info__description {
+.order-cell__info__description {
   font-size: 24px;
   font-family: "Open Sans";
   color: grey;
@@ -39,7 +39,21 @@
   margin: 0px;
 }
 
-.menu-cell__info__details {
+.order-cell__info__details {
+  font-size: 24px;
+  font-family: "Open Sans";
+  color: #D60000;
+  margin: 0px;
+}
+
+.order-cell_status_true {
+  font-size: 24px;
+  font-family: "Open Sans";
+  color: #008000;
+  margin: 0px;
+}
+
+.order-cell_status_false {
   font-size: 24px;
   font-family: "Open Sans";
   color: #D60000;

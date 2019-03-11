@@ -12,7 +12,6 @@
     "react-dom": "^16.8.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.4",
-    "typescript": "^3.3.3",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
@@ -29,5 +28,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^3.3.3333"
+  }
 }

@@ -12,5 +12,6 @@ export interface Order {
       dessert: string,
     },
     price: string;
+    status: boolean;
   }
   
