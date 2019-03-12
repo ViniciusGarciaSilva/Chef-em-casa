@@ -7,9 +7,9 @@ export function getOrders(id: string): Order[] {
   return OrderMock;
 }
 
-export function getMenuDetail(id: string): Order {  
-  const menu = OrderMock.find(menu => menu.id === id);
-  return menu ? menu : OrderMock[0];
+export function getOrderDetail(id: string): Order {  
+  const order = OrderMock.find(order => order.id === id);
+  return order ? order : OrderMock[0];
 }
 
 const OrderMock: Order[] = [
@@ -27,7 +27,7 @@ const OrderMock: Order[] = [
       dessert: 'Sobremesa e seus ingredientes',
     },
     price: '00,00',
-    status: false,
+    status: 0,
   },
   {
     id: '1',
@@ -43,7 +43,7 @@ const OrderMock: Order[] = [
       dessert: 'Sobremesa e seus ingredientes',
     },
     price: '00,00',
-    status: true,
+    status: 0,
   },
   {
     id: '2',
@@ -59,6 +59,6 @@ const OrderMock: Order[] = [
       dessert: 'Sobremesa e seus ingredientes',
     },
     price: '00,00',
-    status: true,
+    status: 1,
   },
 ]

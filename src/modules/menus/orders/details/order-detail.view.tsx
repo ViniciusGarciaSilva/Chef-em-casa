@@ -21,8 +21,11 @@ export default class OrderDetailView extends React.Component<any, any> {
       <div className='container'>
         <div className='header'>
           <img src={prato3}></img>
-          <p className='title'>Nome: Jhon Doe</p>
-          <p className='title'>Pedido: Nhoque</p>
+          <div className='header_column'>
+            <p className='section-title'>Nome: Jhon Doe</p>
+            <p className='section-title'>Pedido: Nhoque</p>
+            <p className='section-title'>Status: Aceito</p>
+          </div>
         </div>
         <div className='section'>
           <p className='section-title'>Descrição</p>
