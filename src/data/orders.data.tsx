@@ -14,7 +14,7 @@ export function getOrderDetail(id: string): Order {
 
 var OrderMock: Order[] = [
   {
-    id: '0',
+    id: '100',
     providerId: '0',
     customerId: '0',
     description: 'Delicioso prato preparado com frango, batatas e repolho.',
@@ -30,7 +30,7 @@ var OrderMock: Order[] = [
     status: 0,
   },
   {
-    id: '1',
+    id: '101',
     providerId: '0',
     customerId: '0',
     description: 'Delicioso prato preparado com frango, batatas e repolho.',
@@ -46,7 +46,7 @@ var OrderMock: Order[] = [
     status: 0,
   },
   {
-    id: '2',
+    id: '102',
     providerId: '0',
     customerId: '0',
     description: 'Delicioso prato preparado com frango, batatas e repolho.',

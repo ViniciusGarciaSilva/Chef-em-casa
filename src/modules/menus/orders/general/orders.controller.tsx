@@ -4,6 +4,7 @@ import { Order } from "../../../../model/order.model";
 import { getOrders } from '../../../../data/orders.data';
 import prato1 from '../../../../images/mock/prato1.png';
 import axios from 'axios';
+import OrderCell from '../../../../components/order/order-cell.component';
 
 export default class OrdersController extends React.Component<any, any> {
   constructor(props: any) {
@@ -12,35 +13,6 @@ export default class OrdersController extends React.Component<any, any> {
       orders: []     
     };
   }
-
-  /*componentWillMount() {
-    const orders: Order[] = getOrders("");
-    var order: Order;
-    axios.get('localhost:5000/order')
-    .then(response => {
-      
-      console.log(response);
-      // order.id = response.data.id;
-      // order.providerId = response.data.providerId;
-      // order.customerId = response.data.customerId;
-      // order.description = response.data.description;
-      // order.schedule = response.data.schedule;
-      // order.price = response.data.price;
-      // order.status = response.data.status;
-      // order.customerName = 'DB'
-      // order.img = prato1;
-      // order.details.appetizer = '';
-      // order.details.main = '';
-      // order.details.dessert = '';
-      order = orders[0];
-      orders.push(order);
-    })
-    .catch(() => {
-      console.log('catch');
-      order = orders[0];
-      orders.push(order);
-    })
-  }*/
   
   async componentDidMount() {
     var orders: Order[] = getOrders("");
@@ -66,18 +38,25 @@ export default class OrdersController extends React.Component<any, any> {
       console.log('then')
       console.log(response);
       console.log(response.data[0].status);
-      order.id = response.data[0].id;
-      order.providerId = response.data[0].providerId;
-      order.customerId = response.data[0].customerId;
-      order.description = response.data[0].description;
-      order.schedule = response.data[0].schedule;
-      order.price = response.data[0].price;
-      order.status = response.data[0].status;
-      order.customerName = 'DB'
-      order.img = prato1;
-      order.details.appetizer = '';
-      order.details.main = '';
-      order.details.dessert = '';
+      response.data.map(order => {
+        var newOrder = {
+          id: order.id,
+          providerId: order.providerId,
+          customerId: order.customerId,
+          description: order.description,
+          schedule: order.schedule,
+          price: order.price,
+          status: order.status,
+          customerName: order.name,
+          img: prato1,
+          appetizer: '',
+          main: '',
+          dessert: '',
+        }
+        console.log(newOrder);
+        orders.push(order);
+      })
+      
       orders.push(order);
     })
     .catch(() => {
