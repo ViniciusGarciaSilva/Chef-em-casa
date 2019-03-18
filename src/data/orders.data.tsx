@@ -12,7 +12,7 @@ export function getOrderDetail(id: string): Order {
   return order ? order : OrderMock[0];
 }
 
-const OrderMock: Order[] = [
+var OrderMock: Order[] = [
   {
     id: '0',
     providerId: '0',
