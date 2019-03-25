@@ -1,0 +1,15 @@
+.menus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menus__title__container {
+  text-align: center;
+}
+
+.menus__title__text {
+  font-size: 144px; 
+  font-family: "Just Another Hand";
+  margin: 20px;
+}
