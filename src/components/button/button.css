@@ -1,0 +1,17 @@
+.add-button__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.add-button__button {
+  width: 225px;
+  height: 60px;
+  background-color: #D60000;
+}
+
+.add-button__text{
+  color: white;
+  font-family: "Just Another Hand";
+  font-size: 48px;
+}

@@ -12,8 +12,8 @@ export default class MenusController extends React.Component<any, any> {
   }
   
   componentDidMount() {
-    const menus: Menu[] = getMenus("");
-    this.setState({menus: menus});
+    getMenus("").then(response => {this.setState({menus: response})});
+    
   }
   
   render() {

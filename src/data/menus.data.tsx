@@ -1,10 +1,28 @@
 import prato1 from '../images/mock/prato1.png'
 import prato2 from '../images/mock/prato2.png'
 import prato3 from '../images/mock/prato3.png'
+import axios from 'axios';
 import { Menu } from '../model/menu.model';
 
-export function getMenus(id: string): Menu[] {
-  return MenuMock;
+export async function getMenus(id: string): Promise<Menu[]> {
+  const menus: Menu[] = [];
+  await axios.get('https://chef-em-casa-backend.herokuapp.com/menu/')
+    .then(response => {
+      response.data.map((menu: Menu) => {
+        menus.push(
+          {
+            id: menu.id,
+            title: menu.title,
+            description: menu.description,
+            img: menu.img,
+            details: MenuMock[0].details,
+            price: menu.price
+          }
+        ) 
+      }) 
+    })
+    .catch(response => console.log(response));
+  return menus;
 }
 
 export function getMenuDetail(id: string): Menu {  
