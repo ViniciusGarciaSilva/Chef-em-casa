@@ -1,12 +1,59 @@
 import * as React from 'react';
+import ic_prato from '../../../images/ic_prato.png';
 
 export default class AddMenuComponent extends React.Component<any,any> {
   render(){
     return (
-      <div>
-        <div className='menus-add__title__container'>
-          <p className='menus-add__title__text'>Adicionar Cardápio</p>
+      <div className='add-menu'>
+        <div className='add-menu__title__container'>
+          <p className='add-menu__title__text'>Adicionar Cardápio</p>
         </div>
+        
+        <form className='add-menu__form'>
+          <div className='add-menu__form__input__container'>
+            <label className='add-menu__form__input__label'>Nome do Cardápio</label>
+            <input className='add-menu__form__input__default'/>
+          </div>
+          
+          <div className='add-menu__form__input__container'>
+            <label className='add-menu__form__input__label'>Descrição</label>
+            <textarea className='add-menu__form__text-area' name="Text1"></textarea>
+          </div>
+          
+          <div className='add-menu__form__input__container'>
+            <div className='add-menu__form__input__dishes__container'>
+              <img className='add-menu__form__input__dishes__container' src={ic_prato}/>
+              <label className='add-menu__form__input__label'>Entrada</label>
+            </div>
+            <input className='add-menu__form__input__default'/>
+          </div>
+          
+          <div className='add-menu__form__input__container'>
+            <div className='add-menu__form__input__dishes__container'>
+              <img className='add-menu__form__input__dishes__container' src={ic_prato}/>
+              <label className='add-menu__form__input__label'>Principal</label>
+            </div>
+            <input className='add-menu__form__input__default'/>
+          </div>
+          
+          <div className='add-menu__form__input__container'>
+            <div className='add-menu__form__input__dishes__container'>
+              <img className='add-menu__form__input__dishes__container' src={ic_prato}/>
+              <label className='add-menu__form__input__label'>Sobremesa</label>
+            </div>
+            <input className='add-menu__form__input__default'/>
+          </div>
+          <div className='add-menu__form__input__container'>
+            <label className='add-menu__form__input__label'>Preço</label>
+            <div className='add-menu__form__price__container'>
+              <a className='add-menu__form__price__text'>R$</a>
+              <input className='add-menu__form__price__input'>
+              </input>
+              <a className='add-menu__form__price__text'>/pessoa</a>
+            </div>
+          </div>
+
+        </form>
       </div>
     )
   }

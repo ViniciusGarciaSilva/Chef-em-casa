@@ -19,11 +19,9 @@ export default class MenusView extends React.Component<MenusViewProps, any> {
         <div>
         <div className='menus__button__container'>
           <NavLink to='/add-menu' style={{textDecoration: 'none'}}>
-            <Button/>
+            <Button text={'+ Adicionar'}/>
           </NavLink>          
         </div>
-
-
         </div>
         <div>
           {this.props.menus.map( (menu: Menu) => <MenuCell {...menu}/>)}

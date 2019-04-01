@@ -1,0 +1,83 @@
+.add-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-menu__title__container {
+  text-align: center;
+}
+
+.add-menu__title__text {
+  font-size: 144px; 
+  font-family: "Just Another Hand";
+  margin: 20px;
+}
+
+.add-menu__form__input__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.add-menu__form__input__label {
+  font-size: 24px;
+  font-family: 'Open Sans';
+  color: grey;
+}
+
+.add-menu__form__input__default {
+  width: 1100px;
+  height: 70px;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 50px
+}
+
+.add-menu__form__text-area {
+  width: 1100px;
+  height: 210px;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  resize: none;
+}
+
+.add-menu__form__input__dishes__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.add-menu__form__input__dishes__container {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.add-menu__form__price__container {
+  margin-top: 20px;
+}
+
+.add-menu__form__price__input {
+  font-family: 'Open Sans';
+  font-size: 24px;
+  margin-right: 10px;
+  height: 70px;
+  width: 140px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.add-menu__form__price__text {
+  font-family: 'Open Sans';
+  font-size: 24px;
+  color: grey;
+  margin-right: 10px;
+}
