@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './menu-cell.css'
 import { NavLink } from 'react-router-dom';
+import defaultImg from '../../images/mock/prato2.png'
 
 export interface MenuCellProps {
   title: string;
@@ -11,9 +12,10 @@ export interface MenuCellProps {
 
 export default class MenuCell extends React.Component<MenuCellProps, any> {
   render() {
+    console.log(this.props.img);
     return (
       <div className='menu-cell'>
-        <img className='menu-cell__img' src={this.props.img}></img>        
+        <img className='menu-cell__img' src={(this.props.img && this.props.img!='' ? this.props.img : defaultImg)}></img>        
         <div className='menu-cell__info'>
           <div className='menu-cell__info__column'>
             <p className='menu-cell__info__title'>{this.props.title}</p>
