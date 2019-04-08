@@ -50,7 +50,7 @@ export default class OrderCell extends React.Component<OrderCellProps, any> {
             </div>
           </div>
           <div className='order-cell__info__column'>
-            <NavLink style={{textDecoration: 'none'}} to={`/order-detail/${this.props.id}`}><p className='order-cell__info__details'>Ver detalhes</p></NavLink>
+            <NavLink style={{textDecoration: 'none'}} to={`/order-detail/${this.props.id && this.props.id!='' ? this.props.id : '1' }`}><p className='order-cell__info__details'>Ver detalhes</p></NavLink>
           </div>
         </div>
       </div>
