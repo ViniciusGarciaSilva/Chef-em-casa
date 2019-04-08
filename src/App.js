@@ -10,7 +10,6 @@ import OrderDetailPage from './modules/menus/orders/details/order-detail.page';
 import OrdersPage from './modules/menus/orders/general/orders.page';
 import AddMenuPage from './modules/menus/add/add-menu.page';
 
-
 class App extends React.Component {
   render() {
     return (
