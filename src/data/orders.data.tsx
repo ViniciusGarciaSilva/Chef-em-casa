@@ -6,7 +6,7 @@ import { Order } from '../model/order.model';
 
 export async function getOrders(): Promise<Order[]> {
   var orders: Order[] = [];
-  await axios.get('http://localhost:5000/order')
+  await axios.get('https://chef-em-casa-backend.herokuapp.com/order')
     .then(response => {
       console.log('then')
       console.log(response);
