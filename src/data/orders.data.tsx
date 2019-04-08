@@ -1,18 +1,69 @@
-import prato1 from '../images/mock/prato1.png'
-import prato2 from '../images/mock/prato2.png'
-import prato3 from '../images/mock/prato3.png'
+import prato1 from '../images/mock/prato1.png';
+import prato2 from '../images/mock/prato2.png';
+import prato3 from '../images/mock/prato3.png';
+import axios from 'axios';
 import { Order } from '../model/order.model';
 
-export function getOrders(id: string): Order[] {
-  return OrderMock;
+export async function getOrders(): Promise<Order[]> {
+  var orders: Order[] = [];
+  await axios.get('http://localhost:5000/order')
+    .then(response => {
+      console.log('then')
+      console.log(response);
+      console.log(response.data[0].status);
+      response.data.map(order => {
+        var newOrder = {
+          id: order.id,
+          providerId: order.providerId,
+          customerId: order.customerId,
+          description: order.description,
+          schedule: order.schedule,
+          price: order.price,
+          status: order.status,
+          customerName: order.name,
+          img: prato1,
+          details: {
+            appetizer: 'Prato de entrada e seus ingredientes', 
+            main: 'Prato principal e seus ingredientes',
+            dessert: 'Sobremesa e seus ingredientes',
+          },
+        }
+        console.log(newOrder);
+        orders.push(newOrder);
+      })
+      return orders;
+    })
+    .catch(() => {
+      var newOrder = {
+        id: '',
+        providerId:'',
+        customerId:'',
+        description:'',
+        schedule:'',
+        price:'',
+        status:0,
+        customerName:'',
+        img: prato1,
+        details: {
+          appetizer: 'Prato de entrada e seus ingredientes', 
+          main: 'Prato principal e seus ingredientes',
+          dessert: 'Sobremesa e seus ingredientes',
+        },
+      }
+      orders.push(newOrder);
+      console.log(orders);
+      return orders;
+    })
+  return orders;
 }
 
-export function getOrderDetail(id: string): Order {  
-  const order = OrderMock.find(order => order.id === id);
-  return order ? order : OrderMock[0];
+export async function getOrderDetail(id: string): Promise<Order> {
+  const orders = await getOrders();
+  const order = orders.find(order => order.id === id);
+  return order ? order : orders[0];
 }
 
-var OrderMock: Order[] = [
+var orders: Order[] = [
   {
     id: '100',
     providerId: '0',
