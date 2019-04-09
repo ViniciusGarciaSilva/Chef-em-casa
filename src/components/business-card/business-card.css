@@ -2,7 +2,10 @@
   width: 250px;
   height: 160px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  margin: 25px;
 }
 
 .business-card__img {
@@ -16,4 +19,5 @@
   color: black;
   font-family: "Just Another Hand";
   font-size: 48px;
+  text-align: center;
 }

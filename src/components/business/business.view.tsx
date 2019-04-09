@@ -1,5 +1,6 @@
 import * as React from 'react';
 import arrow from '../../images/flow_arrow.png';
+import './business.css';
 
 interface BusinessProps {
   title: string;
@@ -9,14 +10,17 @@ export default class Business extends React.Component<BusinessProps, any> {
   render() {
     const children = this.props.children;
     return(
-      <div className='Business'>
-        <a className='Business__title__container'>{this.props.title}</a>
-        <div className='Business__flow'>
-          {React.Children.map(children, child => {
+      <div className='business'>
+        <div className='business__title'>
+          <a>{this.props.title}</a>
+        </div>
+        
+        <div className='business__flow'>
+          {React.Children.map(children, (child, i) => {
               return (
-                <div className='Business__flow__container'>
+                <div className='business__flow__container'>
+                  {i !=0 ? <img className='business__flow__arrow' src={arrow}/> : null}
                   {child}
-                  <img className='Business__flow__arrow' src={arrow}/>
                 </div>
               );
             })

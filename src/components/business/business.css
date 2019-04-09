@@ -1,0 +1,31 @@
+.business {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.business__title {
+  background-color: #E0E0E0;
+  width: 1360px;
+  height: 80px;
+  color: #858585;
+  font-size: 64px;
+  font-family: "Just Another Hand";
+  text-align: center;
+}
+
+.business__flow {
+  display: flex;
+}
+
+.business__flow__arrow {
+  width: 75px;
+  height: 60px;
+}
+
+.business__flow__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
