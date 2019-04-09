@@ -9,7 +9,7 @@ interface HomeCardProps {
 export default class HomeCard extends React.Component<HomeCardProps, any> {
   render() {
     return (
-      <div className='home-card' style={{backgroundImage: this.props.img}}>
+      <div className='home-card' style={{backgroundImage: `url(${this.props.img})`}}>
         <a className='home-card__text'>{this.props.text}</a>
       </div>
     )

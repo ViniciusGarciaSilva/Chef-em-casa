@@ -4,5 +4,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.home-card__text {
+  color: white;
+  font-size: 48px;
+  font-family: 'Just Another Hand'
+}

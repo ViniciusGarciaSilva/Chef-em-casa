@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './orders.css';
-import OrderCell from '../../../../components/order/order-cell.component';
-import { Order } from '../../../../model/order.model';
+import OrderCell from '../../../components/order/order-cell.component';
+import { Order } from '../../../model/order.model';
 
 interface OrdersViewProps {
   orders: Order[];

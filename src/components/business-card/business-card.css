@@ -1,0 +1,19 @@
+.business-card {
+  width: 250px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.business-card__img {
+  width: 100px;
+  height: 100px;
+}
+
+.business-card__text {
+  width: 250px;
+  height: 50px;
+  color: black;
+  font-family: "Just Another Hand";
+  font-size: 48px;
+}
