@@ -1,7 +1,7 @@
 import * as React from 'react';
-import prato3 from '../../../../images/mock/prato3.png';
+import prato3 from '../../../images/mock/prato3.png';
 import './order-detail.css';
-import ic_prato from '../../../../images/ic_prato.png';
+import ic_prato from '../../../images/ic_prato.png';
 
 export default class OrderDetailView extends React.Component<any, any> {
   private renderDetails(title: string, description: string, icon: any): any {

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import OrdersView from './orders.view';
-import { Order } from "../../../../model/order.model";
-import { getOrders } from '../../../../data/orders.data';
+import { Order } from "../../../model/order.model";
+import { getOrders } from '../../../data/orders.data';
 import prato1 from '../../../../images/mock/prato1.png';
-import OrderCell from '../../../../components/order/order-cell.component';
+import OrderCell from '../../../components/order/order-cell.component';
 
 export default class OrdersController extends React.Component<any, any> {
   constructor(props: any) {

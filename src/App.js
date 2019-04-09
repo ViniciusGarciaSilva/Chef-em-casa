@@ -6,8 +6,8 @@ import HomePage from './modules/home/home.page'
 import { Route, Switch } from 'react-router-dom';
 import './app.css';
 import Footer from './components/footer/footer.component';
-import OrderDetailPage from './modules/menus/orders/details/order-detail.page';
-import OrdersPage from './modules/menus/orders/general/orders.page';
+import OrderDetailPage from './modules/orders/details/order-detail.page';
+import OrdersPage from './modules/orders/general/orders.page';
 import AddMenuPage from './modules/menus/add/add-menu.page';
 
 class App extends React.Component {

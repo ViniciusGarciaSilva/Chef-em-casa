@@ -1,7 +1,3 @@
-.home {
-
-}
-
 .home__header {
   width: 100vw;
   height: 500px;
@@ -80,4 +76,12 @@
 .home__main__menus__card {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.home__business {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
