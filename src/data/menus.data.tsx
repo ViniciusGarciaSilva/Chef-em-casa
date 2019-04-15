@@ -7,8 +7,7 @@ import { Menu } from '../model/menu.model';
 export async function getMenus(): Promise<Menu[]> {
   const menus: Menu[] = [];
   console.log("Entrou no getmenus");
-  //await axios.get('https://chef-em-casa-backend.herokuapp.com/menu/')
-  await axios.get("http://localhost:5000/menu/")
+  await axios.get("https://chef-em-casa-backend.herokuapp.com/menu/")
     .then(response => {
       console.log("getMenus() response: ", response);
       response.data.map( menu => {
@@ -46,7 +45,7 @@ export async function getMenuDetail(id: string): Promise<Menu> {
     price: '',
   };
 
-  await axios.get(`http://localhost:5000/menu/${id}`)
+  await axios.get(`https://chef-em-casa-backend.herokuapp.com/menu/${id}`)
   .then(response => {
     console.log("Get Menu Detail: ", response.data[0]);
     const menuBack = response.data[0];
@@ -67,7 +66,7 @@ export async function getMenuDetail(id: string): Promise<Menu> {
 }
 
 export async function createMenu(menu: Menu) {
-  await axios.post("http://localhost:5000/menu/", {
+  await axios.post("https://chef-em-casa-backend.herokuapp.com/menu/", {
     title: menu.title,
     description: menu.description,
     img: "",
