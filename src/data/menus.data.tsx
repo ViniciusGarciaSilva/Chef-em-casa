@@ -4,18 +4,25 @@ import prato3 from '../images/mock/prato3.png'
 import axios from 'axios';
 import { Menu } from '../model/menu.model';
 
-export async function getMenus(id: string): Promise<Menu[]> {
+export async function getMenus(): Promise<Menu[]> {
   const menus: Menu[] = [];
-  await axios.get('https://chef-em-casa-backend.herokuapp.com/menu/')
+  console.log("Entrou no getmenus");
+  //await axios.get('https://chef-em-casa-backend.herokuapp.com/menu/')
+  await axios.get("http://localhost:5000/menu/")
     .then(response => {
-      response.data.map((menu: Menu) => {
+      console.log("getMenus() response: ", response);
+      response.data.map( menu => {
         menus.push(
           {
             id: menu.id,
             title: menu.title,
             description: menu.description,
             img: menu.img,
-            details: MenuMock[0].details,
+            details: {
+              appetizer: menu.dishes.find((element, index, array)=>{element.type=='appetizer'}) || "",
+              main: menu.dishes.find((element, index, array)=>{element.type=='main'}) || "",
+              dessert: menu.dishes.find((element, index, array)=>{element.type=='dessert'}) || "",
+            },
             price: menu.price
           }
         ) 
@@ -25,9 +32,62 @@ export async function getMenus(id: string): Promise<Menu[]> {
   return menus;
 }
 
-export function getMenuDetail(id: string): Menu {  
-  const menu = MenuMock.find(menu => menu.id === id);
-  return menu ? menu : MenuMock[0];
+export async function getMenuDetail(id: string): Promise<Menu> {  
+  var menu: Menu = {
+    id: '',
+    title: '',
+    description: '',
+    img: '',
+    details: {
+      appetizer: '',
+      main: '',
+      dessert: '',
+    },
+    price: '',
+  };
+
+  await axios.get(`http://localhost:5000/menu/${id}`)
+  .then(response => {
+    console.log("Get Menu Detail: ", response.data[0]);
+    const menuBack = response.data[0];
+    menu = {
+      id: menuBack.id,
+      title: menuBack.title,
+      description: menuBack.description,
+      img: "",
+      details: {
+        appetizer: menuBack.dishes.find((element, index, array)=>{return element.type=='appetizer'}).description,
+        main: menuBack.dishes.find((element, index, array)=>{return element.type=='main'}).description,
+        dessert: menuBack.dishes.find((element, index, array)=>{return element.type=='dessert'}).description,
+      },
+      price: menuBack.price  
+    };
+    })
+    return menu;
+}
+
+export async function createMenu(menu: Menu) {
+  await axios.post("http://localhost:5000/menu/", {
+    title: menu.title,
+    description: menu.description,
+    img: "",
+    dishes: [
+      {
+        description: menu.details.appetizer,
+        type: "appetizer" 
+      },
+      {
+        description: menu.details.main,
+        type: "main"
+      },
+      {
+        description: menu.details.dessert,
+        type: "dessert"
+      }
+    ],
+    price: menu.price
+  })
+    .then(response =>{console.log(response)});
 }
 
 const MenuMock: Menu[] = [
