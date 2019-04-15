@@ -1,6 +1,7 @@
 import * as React from 'react';
 import AddMenuComponent from './add-menu.view';
 import { Menu } from '../../../model/menu.model';
+import { createMenu } from '../../../data/menus.data';
 
 export default class AddMenuController extends React.Component<any,any> {
   constructor(props) {
@@ -22,8 +23,14 @@ export default class AddMenuController extends React.Component<any,any> {
         onChangeMain = {this.handleMain}
         onChangeDessert = {this.handleDessert}
         onChangePrice = {this.handlePrice}
+        onSubmit = {this.handleSubmit}
      />
     )
+  }
+
+  handleSubmit = (event) => {
+    console.log("handle submit: ", event);
+    createMenu(this.state.menu);
   }
 
   handleTitle = (event) => {

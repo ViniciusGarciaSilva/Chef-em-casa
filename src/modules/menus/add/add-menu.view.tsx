@@ -10,6 +10,7 @@ interface AddMenuComponentProps {
   onChangeMain: (event) => void;
   onChangeDessert: (event) => void;
   onChangePrice: (event) => void;
+  onSubmit: (event) => void;
 }
 
 export default class AddMenuComponent extends React.Component<AddMenuComponentProps,any> {
@@ -64,7 +65,7 @@ export default class AddMenuComponent extends React.Component<AddMenuComponentPr
           </div>
           <div className='add-menu__form__submit'>
           <NavLink to='/menus' style={{textDecoration: 'none'}}>
-            <Button text={'Adicionar'}/>
+            <Button onPress={this.props.onSubmit} text={'Adicionar'}/>
           </NavLink>    
           </div>
         </form>

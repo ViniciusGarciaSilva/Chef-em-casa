@@ -27,8 +27,10 @@ export default class MenuDetailContainer extends React.Component<MenuDetailConta
   }
 
   componentDidMount() {
-    const menu: Menu = getMenuDetail(this.props.id);
-    this.setState({menu: menu});
+    getMenuDetail(this.props.id).then(response => {
+      console.log(response);
+      this.setState({menu: response})
+    });
   }
   
   render() {
